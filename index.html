@@ -235,6 +235,7 @@
     font-size: 11px;
     color: var(--silver);
     margin-top: 3px;
+    display: block;
   }
 
   /* SPECIAL ROWS */
@@ -273,12 +274,12 @@
 </header>
 
 <nav class="day-nav">
-  <div class="day-tab active" onclick="showDay('day0')">Sun 3 May</div>
-  <div class="day-tab" onclick="showDay('day1')">Mon 4 May</div>
-  <div class="day-tab" onclick="showDay('day2')">Tue 5 May</div>
-  <div class="day-tab" onclick="showDay('day3')">Wed 6 May</div>
-  <div class="day-tab" onclick="showDay('day4')">Thu 7 May</div>
-  <div class="day-tab" onclick="showDay('day5')">Fri 8 May</div>
+  <div class="day-tab active" onclick="showDay('day0', event)">Sun 3 May</div>
+  <div class="day-tab" onclick="showDay('day1', event)">Mon 4 May</div>
+  <div class="day-tab" onclick="showDay('day2', event)">Tue 5 May</div>
+  <div class="day-tab" onclick="showDay('day3', event)">Wed 6 May</div>
+  <div class="day-tab" onclick="showDay('day4', event)">Thu 7 May</div>
+  <div class="day-tab" onclick="showDay('day5', event)">Fri 8 May</div>
 </nav>
 
 <main>
@@ -307,7 +308,7 @@
 <section class="day-section" id="day1">
   <div class="day-header">
     <div class="day-label"><span>Day 1</span> · Monday</div>
-    <div class="day-subtitle">4 May 2026 &nbsp;·&nbsp; Grand Ballroom 1, 2, 3</div>
+    <div class="day-subtitle">4 May 2026 &nbsp;·&nbsp; Conference Center A</div>
   </div>
   <table class="schedule">
     <thead><tr><th>Time</th><th>Event</th></tr></thead>
@@ -316,7 +317,8 @@
         <td class="time-cell">0600–0750</td>
         <td>
           <div class="event-title">Registration & Check-In</div>
-          <div class="room-tag main">Grand Ballroom Foyer</div>
+          <div class="room-tag main">Conference Cent A</div>
+          <div class="room-tag">Vendor Setup – Conference Cent B</div>
         </td>
       </tr>
       <tr class="special">
@@ -324,6 +326,7 @@
         <td>
           <div class="event-title">Opening Ceremony</div>
           <div class="event-note">Welcome Aboard · Arrival of the Official Party · Colors / National Anthem · Invocation · Guest Speakers · Awards Ceremony · Program Expectations · Benediction</div>
+          <div class="room-tag main">Conference Cent A</div>
         </td>
       </tr>
       <tr>
@@ -335,32 +338,36 @@
       </tr>
       <tr>
         <td class="time-cell">0940–1010</td>
-        <td><div class="event-title">Geopolitical Primer</div></td>
+        <td><div class="event-title">Geopolitical Primer</div>
+          <div class="event-note">CAPT O'Connor</div>
+        </td>
       </tr>
       <tr>
         <td class="time-cell">1010–1040</td>
-        <td><div class="event-title">Maritime Blood Program Overview</div></td>
+        <td><div class="event-title">Maritime Blood Program Overview</div>
+          <div class="event-note">CAPT O'Connor</div>
+        </td>
       </tr>
       <tr>
         <td class="time-cell">1040–1110</td>
         <td>
           <div class="event-title">Irregular Warfare (IW)</div>
+          <div class="event-note">HMCM Michal Nakoneczny</div>
         </td>
       </tr>
       <tr>
         <td class="time-cell">1110–1130</td>
         <td>
           <div class="event-title">Operational Requirements of the 2nd Fleet</div>
-          <div class="event-note">Plenary — Grand Ballroom (55 attendees) &nbsp;·&nbsp; USAF may proceed to lunch</div>
-          <div class="room-tag">USN JOMIS Demo – Clearwater Rm</div>
-          <div class="room-tag">USCG Breakout – Board Rm 2</div>
+          <div class="event-note">HMCM Brian Campbell</div>
+          <div class="room-tag">USCG Breakout – City Terr 12 (9 attendees)</div>
         </td>
       </tr>
       <tr>
         <td class="time-cell">1130–1150</td>
         <td>
-          <div class="event-title">Operational Requirements of the 3rd Fleet</div>
-          <div class="event-note">Plenary — Grand Ballroom (72 attendees)</div>
+          <div class="event-title">Operational Requirements of the 4th Fleet</div>
+          <div class="event-note">HMC Alex Fortin</div>
         </td>
       </tr>
       <tr class="break">
@@ -370,28 +377,25 @@
       <tr>
         <td class="time-cell">1300–1320</td>
         <td>
-          <div class="event-title">Operational Requirements of the 4th Fleet</div>
-          <div class="event-note">Plenary — Grand Ballroom (75 attendees)</div>
-          <div class="room-tag">USAF Breakout – Clearwater Rm</div>
-          <div class="room-tag">USCG Breakout – Board Rm 2</div>
+          <div class="event-title">Operational Requirements of the 6th Fleet</div>
+          <div class="event-note">HMCS Christopher Duke</div>
+          <div class="room-tag">USAF Breakout – City Terr 9 (32 attendees)</div>
+          <div class="room-tag">USCG Breakout – City Terr 12 (10 attendees)</div>
+          <div class="event-note" style="margin-top:6px;">USAF Breakout topics: IDMT Sight Picture & Manpower Outlook · CMRP (Comprehensive Medical Readiness Program) · IDMT Career Pyramid · IDMT Association</div>
         </td>
       </tr>
       <tr>
         <td class="time-cell">1320–1340</td>
         <td>
-          <div class="event-title">Operational Requirements of the 5th Fleet</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="time-cell">1340–1400</td>
-        <td>
-          <div class="event-title">Operational Requirements of the 6th Fleet</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="time-cell">1410–1430</td>
-        <td>
           <div class="event-title">Operational Requirements of the 7th Fleet</div>
+          <div class="event-note">Mercedes Sawin</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="time-cell">1340–1430</td>
+        <td>
+          <div class="event-title">JOMIS Navy Fielding Update</div>
+          <div class="event-note">Presenter TBD</div>
         </td>
       </tr>
       <tr class="special">
@@ -400,10 +404,10 @@
           <div class="event-title">NEC Breakout Sessions</div>
           <div class="event-note">Attendees proceed to assigned breakout by NEC. Location updates will be announced day-of.</div>
           <div style="margin-top:10px;">
-            <div class="room-tag">L10A</div>
-            <div class="room-tag">L01A</div>
-            <div class="room-tag">L28A</div>
-            <div class="room-tag">L02A</div>
+            <div class="room-tag">L10A (60 attendees)</div>
+            <div class="room-tag">L01A – River Terr 3 (30 attendees)</div>
+            <div class="room-tag">L28A (6 attendees)</div>
+            <div class="room-tag">L02A – Orlando (1 attendee)</div>
           </div>
         </td>
       </tr>
@@ -428,14 +432,14 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Orthopedics</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Neuro Emergencies</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Diabetic Emergencies</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">K9 TCCC</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
-              <div class="track-card"><div class="track-room">City Terr 6</div><div class="track-topic">Food Safety</div></div>
-              <div class="track-card"><div class="track-room">Board Rm 2</div><div class="track-topic">IDCRS Office Hours / User Support</div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Physical Therapy<span class="track-meta">Joshua Smith</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Neuro Emergencies<span class="track-meta">LCDR Brittany Burns</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Diabetic Emergencies<span class="track-meta">LT Diana Phelps</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">CBC Interpretation for IDC/IDMT<span class="track-meta">CAPT Alden Chiu</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 9</div><div class="track-topic">Food Safety<span class="track-meta">Mr. Bolden</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">TMIP</div></div>
             </div>
           </div>
         </td>
@@ -447,12 +451,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Physical Therapy</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Head Injuries / TBI</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Fresh Whole Blood</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Deployment Surveillance / Med Intel</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Weight Loss Meds<span class="track-meta">LT Mary Barnes</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Urological Emergencies<span class="track-meta">CDR Nathan Oehrlein</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Head Injuries MACE 2<span class="track-meta">Kathryn Rodgers</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">PRP<span class="track-meta">HMCS Matthew Nolen</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS PM Training</div></div>
             </div>
           </div>
         </td>
@@ -464,12 +469,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Urology Emergencies</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Imaging</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Dive Medicine</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Interfacility Transfer / Infection Prevention</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Birth Control<span class="track-meta">LT Mary Barnes</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Urological Emergencies<span class="track-meta">CDR Nathan Oehrlein</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Head Injuries PRA<span class="track-meta">Kathryn Rodgers</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">CBC Interpretation for IDC/IDMT<span class="track-meta">CAPT Alden Chiu</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -486,12 +492,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Optometry / Ophthalmology Sick Call & Red Flags</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">ECG Interpretation</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Surface SMDR</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Non-Operative Treatment of MSK</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Optometry / Ophthalmology Sick Call & Red Flags – Part 1<span class="track-meta">CDR Brent Collins</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Fresh Whole Blood in Diverse Environments<span class="track-meta">HMC Jeremy Horsey</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Surface SMDR<span class="track-meta">HMC James Lukas</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Non-Operative Treatment of MSK<span class="track-meta">CDR Audrey Voss</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -503,12 +510,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Optometry / Ophthalmology Sick Call & Red Flags</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Dive Injuries</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Acute Abdomen</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Communicable Disease</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Optometry / Ophthalmology Sick Call & Red Flags – Part 2<span class="track-meta">CDR Brent Collins</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Dive Injuries<span class="track-meta">HMC Robert Okane</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Acute Abdomen<span class="track-meta">LCDR Chantelle Adaba</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Headaches<span class="track-meta">CDR Audrey Voss</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -520,12 +528,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">High Altitude Illness / Mountain Medicine</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Sub SMDR / PRP</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">GERD / Gastritis</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Dental Emergencies</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">High Altitude Illness / Mountain Medicine<span class="track-meta">CDR Brittany Burns</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Sub SMDR<span class="track-meta">HMC James Weldon</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Wilderness Medicine<span class="track-meta">Dr. Jake Burns</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">CBC Interpretation for IDC/IDMT<span class="track-meta">CAPT Alden Chiu</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -561,14 +570,14 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">EOSC Overview + ORION/SPRINT</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Blast / GSW Injuries</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Fresh Whole Blood</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">GYN and Birth Control</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
-              <div class="track-card"><div class="track-room">City Terr 6</div><div class="track-topic">Pest Management</div></div>
-              <div class="track-card"><div class="track-room">Board Rm 2</div><div class="track-topic">IDCRS Office Hours / User Support</div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">EOSC Overview + ORION/SPRINT<span class="track-meta">Ramone Resop</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Blast / GSW Injuries<span class="track-meta">HM1 Johnathan Stringer</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Dermatology for the Warfighter<span class="track-meta">CAPT Mark Douglas</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">OBGYN: The Basics<span class="track-meta">LT Mary Barnes</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 9</div><div class="track-topic">Pest Management Pt 1<span class="track-meta">LT Eleanor Moen</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS PM Training</div></div>
             </div>
           </div>
         </td>
@@ -580,12 +589,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Emotional Intelligence & Leadership</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Burn Management</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">TCCC in the Maritime Environment</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Weight Loss Medications</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Emotional Intelligence & Leadership<span class="track-meta">Ramon Resop</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Burn Management<span class="track-meta">LCDR Brittany Burns</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Dermatology for the Warfighter<span class="track-meta">CAPT Mark Douglas</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Weight Loss Meds<span class="track-meta">LT Mary Barnes</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">TMIP</div></div>
             </div>
           </div>
         </td>
@@ -597,11 +607,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Mindfulness & Provider Self-Care</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Mental Health</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">2024 TCCC Changes</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Mindfulness & Provider Self-Care<span class="track-meta">Ramone Resop</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Suicide Risk Assessment for Military Providers<span class="track-meta">LT Robert Snyder</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Diabetic Emergencies<span class="track-meta">LT Diana Phelps</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">SKED / BIOMED<span class="track-meta">HM1 James Davis</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -618,13 +630,14 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">ALS</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Burn Management</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">HTN / Lipids</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Dental Emergencies</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
-              <div class="track-card"><div class="track-room">City Terr 6</div><div class="track-topic">Pest Management</div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">ENT<span class="track-meta">LCDR Ashley Schemel</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Burn Management<span class="track-meta">LCDR Brittany Burns</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">HTN / Lipids<span class="track-meta">LT Diana Phelps</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">SKED / BIOMED<span class="track-meta">HM1 James Davis</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 9</div><div class="track-topic">Pest Management Pt 2<span class="track-meta">LT Eleanor Moen</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -636,11 +649,13 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Mental Health</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Blast / GSW Injuries</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T3 Certification <span class="track-meta">(All Day)</span></div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Sub SMDR</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">ENT<span class="track-meta">LCDR Ashley Schemel</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Operational Substance Abuse Screening & Treatment<span class="track-meta">LT Robert Snyder</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Blast / GSW Injuries<span class="track-meta">HM1 Johnathan Stringer</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4 <span class="track-meta">All Day · ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Hand Non-Emergent Care & Emergencies<span class="track-meta">CDR Laura Dutton</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -649,7 +664,7 @@
       <tr>
         <td class="time-cell">1510–1520</td>
         <td>
-          <div class="event-title">Transition to Casual Civilian Attire</div>
+          <div class="event-title">Vendor Time / Transition to Casual Civilian Attire</div>
           <div class="event-note">Shift attire and transit to USS Orleck</div>
         </td>
       </tr>
@@ -683,13 +698,14 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">EOSC Overview + ORION/SPRINT</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Sepsis at Sea</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Diabetic Emergencies</div></div>
-              <div class="track-card"><div class="track-room">Mathews</div><div class="track-topic">TCCC T4 Skills</div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Communicable Disease</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
-              <div class="track-card"><div class="track-room">Board Rm 2</div><div class="track-topic">IDCRS Office Hours / User Support</div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Birth Control<span class="track-meta">LT Mary Barnes</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Acute Abdomen<span class="track-meta">LCDR Chantelle Adaba</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Diabetic Emergencies<span class="track-meta">LT Diana Phelps</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">TCCC Tier 4<span class="track-meta">ATG Mayport</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Headaches<span class="track-meta">CDR Audrey Voss</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 9</div><div class="track-topic">Advanced Life Support<span class="track-meta">Jacksonville SEAT</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS PM Training</div></div>
             </div>
           </div>
         </td>
@@ -701,11 +717,12 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Emotional Intelligence & Leadership</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Dental Emergencies</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">Acute Abdomen</div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Occupational Health</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Emotional Intelligence & Leadership<span class="track-meta">Ramon Resop</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Dental Emergencies<span class="track-meta">LCDR Bhavin Trivedi</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">HTN / Lipids<span class="track-meta">LT Diana Phelps</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Sub SMDR<span class="track-meta">HMC James Weldon</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">IDCRS Office Hours / TMIP User Support</div></div>
             </div>
           </div>
         </td>
@@ -717,11 +734,11 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Concurrent Sessions</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">River Terr 2</div><div class="track-topic">Mindfulness & Provider Self-Care</div></div>
-              <div class="track-card"><div class="track-room">St Johns</div><div class="track-topic">Headaches / Cranial Nerves</div></div>
-              <div class="track-card"><div class="track-room">Hart</div><div class="track-topic">GERD / Gastritis</div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">Ortho Trauma for PCP</div></div>
-              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Vendor Time <span class="track-meta">(choose 1 slot)</span></div></div>
+              <div class="track-card"><div class="track-room">Orlando</div><div class="track-topic">Mindfulness & Provider Self-Care<span class="track-meta">Ramone Resop</span></div></div>
+              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">GERD / Gastritis<span class="track-meta">LCDR Chantelle Adaba</span></div></div>
+              <div class="track-card"><div class="track-room">River Terr 3</div><div class="track-topic">Sepsis at Sea<span class="track-meta">LT Diana Phelps</span></div></div>
+              <div class="track-card"><div class="track-room">Daytona</div><div class="track-topic">Ortho Trauma for PCP<span class="track-meta">Joshua Garland</span></div></div>
+              <div class="track-card"><div class="track-room">Conf Cent B</div><div class="track-topic">Vendor Time <span class="track-meta">Choose 1 slot</span></div></div>
             </div>
           </div>
         </td>
@@ -736,7 +753,7 @@
         <td class="time-cell">1300–1400</td>
         <td>
           <div class="event-title">Closing Remarks</div>
-          <div class="room-tag main">Grand Ballroom 1, 2, 3</div>
+          <div class="room-tag main">Conference Cent A</div>
         </td>
       </tr>
 
@@ -746,9 +763,9 @@
           <div class="concurrent-block">
             <div class="concurrent-title">Service Breakouts & Senior Enlisted Marketplace</div>
             <div class="concurrent-grid">
-              <div class="track-card"><div class="track-room">Grand Ballroom</div><div class="track-topic">Senior Enlisted Marketplace</div></div>
-              <div class="track-card"><div class="track-room">Clearwater</div><div class="track-topic">USAF Breakout</div></div>
-              <div class="track-card"><div class="track-room">Board Rm 2</div><div class="track-topic">USCG Breakout</div></div>
+              <div class="track-card"><div class="track-room">Conf Cent A</div><div class="track-topic">Senior Enlisted Marketplace<span class="track-meta">HMCM Carlos Rodriguez</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 9</div><div class="track-topic">USAF Breakout<span class="track-meta">29 attendees</span></div></div>
+              <div class="track-card"><div class="track-room">City Terr 12</div><div class="track-topic">USCG Breakout<span class="track-meta">7 attendees</span></div></div>
             </div>
           </div>
         </td>
@@ -757,8 +774,8 @@
       <tr>
         <td class="time-cell">1520–1550</td>
         <td>
-          <div class="event-title">Senior Enlisted Academy</div>
-          <div class="room-tag main">Grand Ballroom</div>
+          <div class="event-title">Senior Enlisted Marketplace (continued)</div>
+          <div class="room-tag main">Conference Cent A</div>
         </td>
       </tr>
 
@@ -766,7 +783,8 @@
         <td class="time-cell">1550–1630</td>
         <td>
           <div class="event-title">IDC Mentorship: Advancement Selection Board & Package Review</div>
-          <div class="room-tag main">Grand Ballroom</div>
+          <div class="event-note">HMCM Michal Nakoneczny</div>
+          <div class="room-tag main">Conference Cent A</div>
         </td>
       </tr>
 
@@ -801,17 +819,17 @@
 </section>
 
 <div class="schedule-note">
-  <strong>Note:</strong> This agenda reflects the current draft schedule as of 10 March 2026 and is subject to change. Room assignments for breakout sessions will be confirmed and announced day-of. Attendees are encouraged to check for updates prior to arrival.
+  <strong>Note:</strong> This agenda reflects the current draft schedule as of 2 May 2026 and is subject to change. Room assignments for breakout sessions will be confirmed and announced day-of. Attendees are encouraged to check for updates prior to arrival.
 </div>
 
 </main>
 
 <script>
-  function showDay(id) {
+  function showDay(id, evt) {
     document.querySelectorAll('.day-section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    event.target.classList.add('active');
+    if (evt && evt.target) evt.target.classList.add('active');
   }
 </script>
 
